@@ -1,3 +1,4 @@
+/* ---------- Auth Pages ---------- */
 .auth-container {
   display: grid;
   place-items: center;
@@ -9,7 +10,7 @@
   background: white;
   padding: 30px 40px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
 }
@@ -51,17 +52,20 @@
   transform: scale(1.05);
 }
 
-dashboard-grid {
-  height: 100vh;
+/* ---------- Dashboard Layout ---------- */
+.dashboard-grid {
   display: grid;
   grid-template-areas:
     "header header"
     "sidebar content";
   grid-template-columns: 250px 1fr;
   grid-template-rows: 70px auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-
+/* ---------- Header ---------- */
 .header {
   grid-area: header;
   background: linear-gradient(to right, #0077b6, #0096c7);
@@ -70,13 +74,16 @@ dashboard-grid {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
+/* ---------- Sidebar ---------- */
 .sidebar {
   grid-area: sidebar;
   background: #e0f7fa;
   padding: 20px;
   border-right: 3px solid #0077b6;
+  height: 100%;
 }
 
 .sidebar ul {
@@ -98,12 +105,15 @@ dashboard-grid {
   transform: scale(1.05);
 }
 
+/* ---------- Content Area ---------- */
 .content {
   grid-area: content;
   padding: 30px;
   background: #f7faff;
+  height: 100%;
 }
 
+/* ---------- Cards ---------- */
 .cards {
   display: flex;
   gap: 20px;
@@ -120,7 +130,7 @@ dashboard-grid {
   min-width: 180px;
   text-align: center;
   font-size: 1.2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
 }
 
@@ -128,6 +138,7 @@ dashboard-grid {
   transform: translateY(-5px);
 }
 
+/* ---------- Navbar ---------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -135,7 +146,7 @@ dashboard-grid {
   background: linear-gradient(to right, #0077b6, #00b4d8);
   color: white;
   padding: 10px 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar h1 {
@@ -149,7 +160,8 @@ dashboard-grid {
   gap: 15px;
 }
 
-.navbar a, .navbar button {
+.navbar a,
+.navbar button {
   color: white;
   background: transparent;
   border: none;
@@ -159,9 +171,15 @@ dashboard-grid {
   transition: 0.3s;
 }
 
-.navbar a:hover, .navbar button:hover {
+.navbar a:hover,
+.navbar button:hover {
   color: #caf0f8;
   transform: scale(1.1);
 }
-.header, .sidebar, .content {
+
+/* Header, Sidebar, and Content Full Height */
+.header,
+.sidebar,
+.content {
   height: 100%;
+}
